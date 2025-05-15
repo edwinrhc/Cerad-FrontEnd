@@ -1,0 +1,14 @@
+
+# tipo(scope): título del commit
+#
+# tipos: feat | fix | docs | style | refactor | test | chore
+#
+# Ejemplos:
+# feat(auth): implementar login con JWT
+# fix(uploads): corregir validación de tamaño en subida de archivos
+# chore: actualizar dependencias del proyecto
+#
+# Cuerpo del mensaje (opcional, explica qué y por qué)
+#
+# Footer (opcional, referencias a tickets o issues)
+
