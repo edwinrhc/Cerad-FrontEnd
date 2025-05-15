@@ -1,59 +1,74 @@
-# CeradFrontEnd
+# CeradFrontEnd 🚀
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+Frontend del sistema **CERAD** desarrollado con **Angular 19**, siguiendo arquitectura modular (Core, Shared, Features) y buenas prácticas.
 
-## Development server
+Este proyecto se comunica con el backend **CeradSystem API REST** (Spring Boot) para gestionar la carga y procesamiento de archivos.
 
-To start a local development server, run:
+---
 
+## 📦 Tecnologías usadas
+
+- ✅ Angular 19 (CLI 19.2.12)
+- ✅ TypeScript
+- ✅ Tailwind CSS (estilización rápida y profesional)
+- ✅ Husky + Commitlint + Commitizen (convención de commits automatizada)
+- ✅ Comunicación con API REST (Spring Boot Backend)
+
+---
+
+## 🏁 Instalación y ejecución
+
+### 1️⃣ Clonar el proyecto
 ```bash
-ng serve
+git clone https://github.com/tu-usuario/cerad-frontend.git
+cd cerad-frontend
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 2️⃣ Instalar dependencias
+````
+npm install
+````
+### 3️⃣ Levantar servidor de desarrollo
+````
+ng serve -o
+````
+Accede en tu navegador a http://localhost:4200/.
 
-## Code scaffolding
+### 🌐 Conexión al Backend
+Este frontend se comunica con el backend CeradSystem API REST que debe estar ejecutándose en:
+````
+http://localhost:8080/api/
+````
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 🎨 Configuración Tailwind CSS
+Tailwind está integrado en este proyecto.
+Si deseas personalizar el diseño:
+ - Edita tailwind.config.js para extender temas, colores, breakpoints, etc.
+ - Usa clases utilitarias directamente en los componentes.
+ - 
+### ✅ Estructura del Proyecto
+````
+src/
+└── app/
+├── core/        # Servicios base, guards, interceptors
+├── shared/      # Componentes reutilizables (Header, Footer, Navbar)
+└── features/    # Módulos funcionales (auth, dashboard, uploads, usuarios)
+````
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ✅ Convención de Commits (automatizada)
+### 1️⃣ Configurar mensaje de commit automático
 
-```bash
-ng generate --help
-```
+````
+git config commit.template .gitmessage
+````
 
-## Building
+---
 
-To build the project run:
+## ✅ ¿Qué logras con esto?
+✔️ Profesional, claro y práctico  
+✔️ Comunicas que es un frontend que se conecta a tu backend Spring Boot  
+✔️ Tienes los comandos para commits automatizados  
+✔️ Documentas Tailwind, estructura, flujos
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+--
