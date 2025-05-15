@@ -71,4 +71,3 @@ git config commit.template .gitmessage
 ✔️ Tienes los comandos para commits automatizados  
 ✔️ Documentas Tailwind, estructura, flujos
 
---
