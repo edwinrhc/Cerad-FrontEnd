@@ -10,7 +10,7 @@ Este proyecto se comunica con el backend **CeradSystem API REST** (Spring Boot) 
 
 - ✅ Angular 19 (CLI 19.2.12)
 - ✅ TypeScript
-- ✅ Tailwind CSS (estilización rápida y profesional)
+- ✅ Tailwind CSS 3.3.5 with PostCSS a (estilización rápida y profesional)
 - ✅ Husky + Commitlint + Commitizen (convención de commits automatizada)
 - ✅ Comunicación con API REST (Spring Boot Backend)
 
