@@ -13,23 +13,30 @@ import { CommonModule } from '@angular/common';
 })
 export class LoginComponent {
 
-  username = '';
+  email = '';
   password = '';
   errorMessage = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
   onLogin() {
-    this.authService.login({ username: this.username, password: this.password })
+    console.log('Email enviado:', this.email);
+    console.log('Password enviado:', this.password);
+
+    this.authService.login({ email: this.email, password: this.password })
       .subscribe({
         next: (response) => {
-          this.authService.saveToken(response.token);
+          console.log('Login success:', response);
+          this.authService.saveToken(response.data.token);
           this.router.navigate(['/dashboard']);
         },
         error: (error) => {
-          console.error(error);
+          console.error('Login failed:', error);
           this.errorMessage = 'Credenciales incorrectas';
         }
       });
   }
+
+
+
 }
