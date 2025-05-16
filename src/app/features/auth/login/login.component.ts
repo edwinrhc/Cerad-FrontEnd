@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
 import { CommonModule } from '@angular/common';
+import {NotificacionService} from '../../../core/services/notificacion.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -17,7 +18,7 @@ export class LoginComponent {
   password = '';
   errorMessage = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router,private notificationService: NotificacionService ) {}
 
   onLogin() {
     console.log('Email enviado:', this.email);
@@ -32,7 +33,7 @@ export class LoginComponent {
         },
         error: (error) => {
           console.error('Login failed:', error);
-          this.errorMessage = 'Credenciales incorrectas';
+          this.notificationService.show('❌ Credenciales incorrectas');
         }
       });
   }

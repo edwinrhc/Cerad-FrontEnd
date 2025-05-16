@@ -1,0 +1,21 @@
+<div *ngIf="message" class="fixed top-5 right-5 z-50 max-w-xs w-full bg-white border border-gray-200 rounded-lg shadow-lg flex items-center gap-3 p-4 animate-fade-in-out">
+  <div class="flex-shrink-0">
+    <!-- Ícono opcional, puedes usar heroicons o emoji -->
+    <svg class="h-6 w-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+         xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M5 13l4 4L19 7"></path>
+    </svg>
+  </div>
+  <div class="flex-1 text-sm font-medium text-gray-800">
+    {{ message }}
+  </div>
+  <!-- Botón cerrar opcional -->
+  <button (click)="message = ''" class="text-gray-400 hover:text-gray-700 focus:outline-none">
+    <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+         xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+</div>
