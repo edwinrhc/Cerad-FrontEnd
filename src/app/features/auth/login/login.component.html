@@ -1,19 +1,22 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
-  <div class="bg-white p-8 rounded shadow-md w-96">
-    <h2 class="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h2>
-    <form (ngSubmit)="onLogin()">
-      <div class="mb-4">
-        <label class="block mb-1">Email</label>
-        <input type="text" [(ngModel)]="email" name="email" required  class="w-full border px-3 py-2 rounded" />
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md animate-fade-in-down">
+    <h2 class="text-3xl font-extrabold mb-8 text-center text-gray-800">Iniciar Sesión</h2>
+    <form (ngSubmit)="onLogin()" class="space-y-6">
+      <div>
+        <label class="block mb-2 text-sm font-semibold text-gray-700">Email</label>
+        <input type="email" [(ngModel)]="email" name="email" required placeholder="correo@correo.com"
+               class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
       </div>
-      <div class="mb-6">
-        <label class="block mb-1">Contraseña</label>
-        <input type="password" [(ngModel)]="password" name="password" required class="w-full border px-3 py-2 rounded" />
+      <div>
+        <label class="block mb-2 text-sm font-semibold text-gray-700">Contraseña</label>
+        <input type="password" [(ngModel)]="password" name="password" required placeholder="******"
+               class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm">
       </div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Ingresar</button>
-      <p *ngIf="errorMessage" class="text-red-500 text-sm mt-4">{{ errorMessage }}</p>
+      <button type="submit"
+              class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg font-semibold shadow-md hover:from-blue-700 hover:to-purple-700 transition duration-300">
+        Ingresar
+      </button>
+      <p *ngIf="errorMessage" class="text-red-500 text-sm text-center mt-4 animate-pulse">{{ errorMessage }}</p>
     </form>
   </div>
 </div>
-
-
