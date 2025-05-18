@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NotificacionService} from '../../../core/services/notificacion.service';
 import {HttpClient} from '@angular/common/http';
+import {UploadResponse} from '../../../core/models/upload-response.model';
 
 @Component({
   selector: 'app-uploads',
@@ -36,7 +37,7 @@ export class UploadsComponent {
     const formData = new FormData();
     formData.append('file', this.selectedFile);
 
-    this.http.post('http://localhost:8085/api/cerad/upload', formData)
+    this.http.post<UploadResponse>('http://localhost:8085/api/cerad/upload', formData)
       .subscribe({
         next: () => {
           this.notificationService.show('✅ Archivo subido exitosamente');
