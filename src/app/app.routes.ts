@@ -14,6 +14,10 @@ export const routes: Routes = [
     path: 'dashboard',
     loadComponent: () => import('./features/dashboard/dashboard/dashboard.component').then(m => m.DashboardComponent)
   },
+  {
+    path: 'upload',
+    loadComponent: () => import('./features/uploads/uploads/uploads.component').then(m => m.UploadsComponent)
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login' }
 ];

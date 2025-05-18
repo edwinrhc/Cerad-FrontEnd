@@ -1,1 +1,17 @@
-<p>uploads works!</p>
+<div class="max-w-xl mx-auto bg-white shadow-md rounded-lg p-6 mt-10">
+  <h2 class="text-xl font-bold mb-4 text-gray-800">Subida de archivo CERAD</h2>
+
+  <form (submit)="onUpload(); $event.preventDefault()">
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2">Selecciona archivo .txt</label>
+      <input type="file" (change)="onFileSelected($event)"
+             accept=".txt"
+             class="w-full border px-4 py-2 rounded file:bg-blue-600 file:text-white file:border-none file:px-4 file:py-2 file:rounded file:cursor-pointer">
+    </div>
+
+    <button type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded transition duration-200">
+      Subir archivo
+    </button>
+  </form>
+</div>

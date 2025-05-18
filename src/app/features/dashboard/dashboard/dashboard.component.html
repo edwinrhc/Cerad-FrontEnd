@@ -1,1 +1,21 @@
-<p>dashboard works!</p>
+<div class="p-6">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">Bienvenido al módulo de subida de archivos CERAD</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white shadow rounded-lg p-5 border border-gray-200">
+      <h3 class="text-lg font-semibold text-blue-600 mb-2">Subir archivo TXT</h3>
+      <p class="text-sm text-gray-600 mb-4">Cargar el archivo estructurado de aportes para su procesamiento con Spring Batch.</p>
+      <button routerLink="/upload" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        Ir a Subida
+      </button>
+    </div>
+
+    <div class="bg-white shadow rounded-lg p-5 border border-gray-200">
+      <h3 class="text-lg font-semibold text-green-600 mb-2">Historial de Procesamientos</h3>
+      <p class="text-sm text-gray-600 mb-4">Consulta los archivos procesados, estados y registros con error.</p>
+      <button routerLink="/historial" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
+        Ver Historial
+      </button>
+    </div>
+  </div>
+</div>
