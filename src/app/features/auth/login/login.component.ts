@@ -21,8 +21,8 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router,private notificationService: NotificacionService ) {}
 
   onLogin() {
-    console.log('Email enviado:', this.email);
-    console.log('Password enviado:', this.password);
+/*    console.log('Email enviado:', this.email);
+    console.log('Password enviado:', this.password);*/
 
     this.authService.login({ email: this.email, password: this.password })
       .subscribe({

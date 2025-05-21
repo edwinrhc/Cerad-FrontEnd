@@ -18,6 +18,11 @@
           path: 'upload',
           loadComponent: () => import('./features/uploads/uploads/uploads.component').then(m => m.UploadsComponent)
         },
+        {
+          path: 'historial',
+          loadComponent: () => import('./features/batch-history/batch-history.component').then(m => m.BatchHistoryComponent),
+          canActivate: [authGuard]
+        },
         {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
 
       ]
